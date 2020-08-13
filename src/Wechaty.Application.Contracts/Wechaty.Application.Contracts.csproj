@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Ddd.Application.Contracts" Version="3.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wechaty.Domain.Shared\Wechaty.Domain.Shared.csproj" />
+    <ProjectReference Include="..\Wechaty.Puppet.Model\Wechaty.Puppet.Model.csproj" />
+  </ItemGroup>
+
+</Project>
