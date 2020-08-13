@@ -18,6 +18,7 @@ namespace Wechaty.PlugIn
         {
             // 手动注册当前服务
             context.Services.AddAssemblyOf<WechatyPlugInWeatherModule>();
+            context.Services.AddHttpClient();
         }
 
     }

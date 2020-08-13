@@ -4,11 +4,11 @@ using Microsoft.Extensions.Hosting;
 using Serilog;
 using System;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Volo.Abp;
 using Volo.Abp.Modularity.PlugIns;
-using Volo.Abp.Threading;
 using Wechaty.Application.Contracts;
 using Wechaty.Domain.Shared;
 using Wechaty.Domain.Shared.DTO;
@@ -37,7 +37,8 @@ namespace Wechaty.Getting.Start
                   // TODO 这里可以读取所有继承 WechatyPluginBaseModule的模块，动态读取
                   options.PlugInSources.AddTypes(
                       typeof(WechatyDingDongModule),
-                      typeof(WechatyQRCodeTerminalModule));
+                      typeof(WechatyQRCodeTerminalModule),
+                      typeof(WechatyPlugInWeatherModule));
 
               }))
             {
@@ -60,6 +61,7 @@ namespace Wechaty.Getting.Start
                 //var plugin = application.ServiceProvider.GetRequiredService<WechatyPluginBaseModule>();
                 var qrCodePlugin = application.ServiceProvider.GetRequiredService<QRCodeTerminalAppService>();
                 var dingdongPlugin = application.ServiceProvider.GetRequiredService<DingDongAppService>();
+                var weatherPlugin = application.ServiceProvider.GetRequiredService<WeatherPlugInService>();
 
                 bot.Instance(wechatyOptions);
 
@@ -78,6 +80,15 @@ namespace Wechaty.Getting.Start
                     if (payload.Text == "天王盖地虎")
                     {
                         await Message.Say("宝塔镇河妖", payload);
+                    }
+                    if (payload.Text.Contains("天气"))
+                    {
+                        var city = payload.Text.Split("天气").Where(x => x != "天气").FirstOrDefault();
+                        var weatherInfo = await weatherPlugin.GetWeatherAsync(new PlugIn.Weather.InputDto()
+                        {
+                            Token = "c7601763d0a241568f75213509012c48",
+                            City = city
+                        });
                     }
                 });
 

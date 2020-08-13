@@ -30,6 +30,7 @@
   <ItemGroup>
     <ProjectReference Include="..\PlugIn\Wechaty.PlugIn.DingDong\Wechaty.PlugIn.DingDong.csproj" />
     <ProjectReference Include="..\PlugIn\Wechaty.PlugIn.QRCodeTerminal\Wechaty.PlugIn.QRCodeTerminal.csproj" />
+    <ProjectReference Include="..\PlugIn\Wechaty.PlugIn.Weather\Wechaty.PlugIn.Weather.csproj" />
     <ProjectReference Include="..\Wechaty.Application.Contracts\Wechaty.Application.Contracts.csproj" />
   </ItemGroup>
 
