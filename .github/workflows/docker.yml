@@ -1,0 +1,29 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  push_to_registry:
+    name: Push Docker image to Aliyun Docker Hub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Push to Docker Hub
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.ALIYUN_USERNAME }}
+          password: ${{ secrets.ALIYUN_PASSWORD }}
+          registry: registry.cn-shanghai.aliyuncs.com
+          dockerfile: ./src/Wechaty.Getting.Start/Dockerfile
+          repository: wechaty/dotnet-wechaty
+          tag_with_ref: true
+          tag_with_sha: true
