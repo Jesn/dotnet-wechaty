@@ -1,8 +1,0 @@
-version: '3.4'
-
-services:
-  wechaty.getting.start:
-    image: ${DOCKER_REGISTRY-}dotnet_wechaty
-    build:
-      context: .
-      dockerfile: src/Wechaty.Getting.Start/Dockerfile

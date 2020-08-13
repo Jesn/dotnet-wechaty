@@ -25,5 +25,3 @@ jobs:
           registry: registry.cn-shanghai.aliyuncs.com
           dockerfile: ./src/Wechaty.Getting.Start/Dockerfile
           repository: wechaty/dotnet-wechaty
-          tag_with_ref: true
-          tag_with_sha: true

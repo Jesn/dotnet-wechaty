@@ -1,5 +1,8 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
+LABEL maintainer="Darren <jesn2013@hotmail.com>"
+
+
 FROM mcr.microsoft.com/dotnet/core/runtime:3.1-buster-slim AS base
 WORKDIR /app
 
@@ -27,3 +30,9 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "Wechaty.Getting.Start.dll"]
+
+LABEL \
+  org.label-schema.license="Apache-2.0" \
+  org.label-schema.build-date="$(date -u +'%Y-%m-%dT%H:%M:%SZ')" \
+  org.label-schema.version="$DOCKER_TAG" \
+  org.label-schema.docker.params="WECHATY_TOKEN=token token from https://www.chatie.io,  TZ='Asia/Shanghai' TimeZone"

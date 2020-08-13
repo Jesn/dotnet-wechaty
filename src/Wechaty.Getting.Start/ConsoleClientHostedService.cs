@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using System;
+using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using Volo.Abp;
@@ -16,7 +17,7 @@ using Wechaty.PuppetModel;
 
 namespace Wechaty.Getting.Start
 {
-    
+
     public class ConsoleClientHostedService : IHostedService
     {
         private IWechatyBotService bot { get; set; }
@@ -88,6 +89,8 @@ namespace Wechaty.Getting.Start
         {
             await bot.Stop();
             Console.WriteLine("shutdown");
+            // 彻底释放资源
+            Process.GetCurrentProcess().Kill();
         }
     }
 }
