@@ -1,9 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using Shouldly;
+using System.Threading.Tasks;
 using Wechaty.PlugIn.Weather;
 using Xunit;
-using Shouldly;
-using System.Net.Http;
-using System.Linq;
 
 namespace Wechaty.PlugIn.Tests.PlugInTests
 {
@@ -20,7 +18,6 @@ namespace Wechaty.PlugIn.Tests.PlugInTests
         [Fact]
         public async Task GetWeather()
         {
-
             var result = await _weatherPlugInService.GetWeatherAsync(
                 new InputDto()
                 {
