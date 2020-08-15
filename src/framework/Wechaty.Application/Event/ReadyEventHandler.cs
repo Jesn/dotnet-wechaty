@@ -9,8 +9,11 @@ namespace Wechaty.Application.Event
     {
         public async Task HandleEventAsync(EventReadyPayload eventData)
         {
-            Console.WriteLine($"Ready:{eventData.Data}");
-            readyState = StateEnum.On;
+            await Task.Run(() =>
+            {
+                Console.WriteLine($"Ready:{eventData.Data}");
+                readyState = StateEnum.On;
+            });
         }
     }
 }

@@ -247,7 +247,7 @@ namespace Wechaty.Application.ActionService
         #endregion
 
         // TODO Contact Delete
-        public async Task Delete()
+        public void Delete()
         {
 
         }

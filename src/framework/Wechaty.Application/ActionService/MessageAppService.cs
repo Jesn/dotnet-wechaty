@@ -13,7 +13,7 @@ namespace Wechaty.Application.ActionService
         private string AT_SEPRATOR_REGEX = "[\\u2005\\u0020]";
         protected MessagePayload MessagePayload;
 
-        private ILogger<MessageAppService> Logger { get; set; }
+        private new ILogger<MessageAppService> Logger { get; set; }
 
         public MessageAppService()
         {

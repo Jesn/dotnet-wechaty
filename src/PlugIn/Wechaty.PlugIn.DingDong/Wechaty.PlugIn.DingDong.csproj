@@ -1,12 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <RootNamespace>Wechaty.PlugIn</RootNamespace>
   </PropertyGroup>
+  <Import Project="../../../common.props"/>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Wechaty.Plugin.Base\Wechaty.Plugin.Base.csproj" />
+    <ProjectReference Include="..\..\framework\Wechaty.Plugin.Base\Wechaty.Plugin.Base.csproj" />
   </ItemGroup>
 
 </Project>

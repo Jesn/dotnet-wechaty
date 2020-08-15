@@ -10,7 +10,10 @@ namespace Wechaty.Application.Event
     {
         public async Task HandleEventAsync(EventResetPayload eventData)
         {
-            Console.WriteLine($"ReSet Handler:{eventData.Data}");
+            await Task.Run(() =>
+             {
+                 Console.WriteLine($"ReSet Handler:{eventData.Data}");
+             });
         }
     }
 }

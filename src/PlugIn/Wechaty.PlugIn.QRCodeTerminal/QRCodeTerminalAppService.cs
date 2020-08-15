@@ -16,18 +16,20 @@ namespace Wechaty.PlugIn
             {
                 if (eventData.Status == ScanStatus.Waiting || eventData.Status == ScanStatus.Timeout)
                 {
-                    string qrcodeImageUrl = GetWechatGithubQrCode(eventData.Qrcode);
+                    await Task.Run(() =>
+                    {
+                        string qrcodeImageUrl = GetWechatGithubQrCode(eventData.Qrcode);
 
-                    Url generator = new Url(qrcodeImageUrl);
-                    string payload = generator.ToString();
+                        Url generator = new Url(qrcodeImageUrl);
+                        string payload = generator.ToString();
 
-                    QRCodeGenerator qrGenerator = new QRCodeGenerator();
-                    QRCodeData qrCodeData = qrGenerator.CreateQrCode(payload, QRCodeGenerator.ECCLevel.L);
+                        QRCodeGenerator qrGenerator = new QRCodeGenerator();
+                        QRCodeData qrCodeData = qrGenerator.CreateQrCode(payload, QRCodeGenerator.ECCLevel.L);
 
-                    AsciiQRCode qrCodeAsi = new AsciiQRCode(qrCodeData);
-                    string qrCodeAsAsciiArt = qrCodeAsi.GetGraphic(1);
-                    Console.WriteLine(qrCodeAsAsciiArt);
-                    
+                        AsciiQRCode qrCodeAsi = new AsciiQRCode(qrCodeData);
+                        string qrCodeAsAsciiArt = qrCodeAsi.GetGraphic(1);
+                        Console.WriteLine(qrCodeAsAsciiArt);
+                    });
                 }
             });
         }

@@ -14,7 +14,7 @@ namespace Wechaty.Application
 {
     public class WechatyBotService : AccessoryAppService, IWechatyBotService
     {
-        public ILogger<WechatyBotService> Logger { get; set; }
+        public new  ILogger<WechatyBotService> Logger { get; set; }
 
         public WechatyBotService(IPuppetDataService puppetService,
             ContactAppService _contact,

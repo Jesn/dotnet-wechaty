@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\dotnet-wechaty\src\PlugIn\Wechaty.PlugIn.Weather\Wechaty.PlugIn.Weather.csproj" />
+    <ProjectReference Include="..\..\src\framework\Wechaty.Plugin.Base\Wechaty.Plugin.Base.csproj" />
     <ProjectReference Include="..\Wechaty.TestBase\Wechaty.TestBase.csproj" />
   </ItemGroup>
 

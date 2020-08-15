@@ -73,7 +73,7 @@ namespace Wechaty.PuppetHostie
             }
             catch (Exception ex)
             {
-                throw new Exception("获取hostie gateway 对应的主机信息异常");
+                throw new BusinessException("获取hostie gateway 对应的主机信息异常");
             }
         }
 
