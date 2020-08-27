@@ -25,3 +25,4 @@ jobs:
           registry: registry.cn-shanghai.aliyuncs.com
           dockerfile: ./src/Sample/Wechaty.Getting.Start/Dockerfile 
           repository: wechaty/dotnet-wechaty
+          tags: latest

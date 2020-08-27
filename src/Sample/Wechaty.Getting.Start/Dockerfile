@@ -28,3 +28,10 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "Wechaty.Getting.Start.dll"]
+
+
+LABEL \	
+  org.label-schema.license="Apache-2.0" \	
+  org.label-schema.build-date="$(date -u +'%Y-%m-%dT%H:%M:%SZ')" \	
+  org.label-schema.version="$DOCKER_TAG" \	
+  org.label-schema.docker.params="WECHATY_TOKEN=token token from https://www.chatie.io,  TZ='Asia/Shanghai' TimeZone"

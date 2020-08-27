@@ -13,4 +13,4 @@ docker run --name dotnet-wechaty -e Wechaty_Token="your token" -e TZ="Asia/Shang
 | :-----| :----: | :----: |
 | WECHATY_TOKEN | 是 | wechaty token |
 | Wechaty_NAME | 否 | 机器人名称 |
-| Wechaty_ENDPOINT hostie server|
+| Wechaty_ENDPOINT |否| hostie server|
