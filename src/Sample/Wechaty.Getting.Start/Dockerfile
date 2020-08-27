@@ -18,7 +18,7 @@ COPY ["src/framework/Wechaty.Domain.Shared/Wechaty.Domain.Shared.csproj", "src/f
 COPY ["src/framework/Wechaty.Application.Contracts/Wechaty.Application.Contracts.csproj", "src/framework/Wechaty.Application.Contracts/"]
 COPY ["src/PlugIn/Wechaty.PlugIn.QRCodeTerminal/Wechaty.PlugIn.QRCodeTerminal.csproj", "src/PlugIn/Wechaty.PlugIn.QRCodeTerminal/"]
 COPY ["src/PlugIn/Wechaty.PlugIn.DingDong/Wechaty.PlugIn.DingDong.csproj", "src/PlugIn/Wechaty.PlugIn.DingDong/"]
-RUN dotnet restore "src/framework/Wechaty.Getting.Start/Wechaty.Getting.Start.csproj"
+RUN dotnet restore "src/Sample/Wechaty.Getting.Start/Wechaty.Getting.Start.csproj"
 COPY . .
 WORKDIR "/src/src/framework/Wechaty.Getting.Start"
 RUN dotnet build "Wechaty.Getting.Start.csproj" -c Release -o /app/build

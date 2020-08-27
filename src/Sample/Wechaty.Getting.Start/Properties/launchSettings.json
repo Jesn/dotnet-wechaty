@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "Wechaty.Getting.Start": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "Wechaty_Token": "puppet_padplus_f415f3ab3bead8a0"
+      }
+    },
+    "Docker (1)": {
+      "commandName": "Docker"
+    }
+  }
+}
