@@ -1,13 +1,11 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-LABEL maintainer="Darren <jesn2013@hotmail.com>"
-
 FROM mcr.microsoft.com/dotnet/core/runtime:3.1-buster-slim AS base
 WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["src/framework/Wechaty.Getting.Start/Wechaty.Getting.Start.csproj", "src/framework/Wechaty.Getting.Start/"]
+COPY ["src/Sample/Wechaty.Getting.Start/Wechaty.Getting.Start.csproj", "src/Sample/Wechaty.Getting.Start/"]
 COPY ["src/PlugIn/Wechaty.PlugIn.Weather/Wechaty.PlugIn.Weather.csproj", "src/PlugIn/Wechaty.PlugIn.Weather/"]
 COPY ["src/framework/Wechaty.Plugin.Base/Wechaty.Plugin.Base.csproj", "src/framework/Wechaty.Plugin.Base/"]
 COPY ["src/framework/Wechaty.Application/Wechaty.Application.csproj", "src/framework/Wechaty.Application/"]
@@ -20,7 +18,7 @@ COPY ["src/PlugIn/Wechaty.PlugIn.QRCodeTerminal/Wechaty.PlugIn.QRCodeTerminal.cs
 COPY ["src/PlugIn/Wechaty.PlugIn.DingDong/Wechaty.PlugIn.DingDong.csproj", "src/PlugIn/Wechaty.PlugIn.DingDong/"]
 RUN dotnet restore "src/Sample/Wechaty.Getting.Start/Wechaty.Getting.Start.csproj"
 COPY . .
-WORKDIR "/src/src/framework/Wechaty.Getting.Start"
+WORKDIR "/src/src/Sample/Wechaty.Getting.Start"
 RUN dotnet build "Wechaty.Getting.Start.csproj" -c Release -o /app/build
 
 FROM build AS publish
@@ -30,9 +28,3 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "Wechaty.Getting.Start.dll"]
-
-LABEL \
-  org.label-schema.license="Apache-2.0" \
-  org.label-schema.build-date="$(date -u +'%Y-%m-%dT%H:%M:%SZ')" \
-  org.label-schema.version="$DOCKER_TAG" \
-  org.label-schema.docker.params="WECHATY_TOKEN=token token from https://www.chatie.io,  TZ='Asia/Shanghai' TimeZone"
