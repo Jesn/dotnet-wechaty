@@ -23,5 +23,5 @@ jobs:
           username: ${{ secrets.ALIYUN_USERNAME }}
           password: ${{ secrets.ALIYUN_PASSWORD }}
           registry: registry.cn-shanghai.aliyuncs.com
-          dockerfile: ./src/Wechaty.Getting.Start/Dockerfile
+          dockerfile: ./src/Sample/Wechaty.Getting.Start/Dockerfile
           repository: wechaty/dotnet-wechaty
