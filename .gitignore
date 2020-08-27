@@ -254,3 +254,4 @@ paket-files/
 # Wechaty
 src/Wechaty.ConsoleAppSample/Logs/*
 /src/Wechaty.Getting.Start/Properties/launchSettings.json
+/src/framework/Wechaty.Getting.Start/Properties/launchSettings.json

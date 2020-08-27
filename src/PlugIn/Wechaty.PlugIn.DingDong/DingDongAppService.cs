@@ -15,10 +15,6 @@ namespace Wechaty.PlugIn
                 {
                     await Message.Say("dong");
                 }
-                else if (payload.Text.ToLower() == "dong")
-                {
-                    await Message.Say("ding");
-                }
             });
         }
 
