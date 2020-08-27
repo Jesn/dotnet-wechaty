@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <DockerfileContext>..\..</DockerfileContext>
+    <DockerfileContext>..\..\..</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,10 +28,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\framework\Wechaty.Application.Contracts\Wechaty.Application.Contracts.csproj" />
     <ProjectReference Include="..\..\PlugIn\Wechaty.PlugIn.DingDong\Wechaty.PlugIn.DingDong.csproj" />
     <ProjectReference Include="..\..\PlugIn\Wechaty.PlugIn.QRCodeTerminal\Wechaty.PlugIn.QRCodeTerminal.csproj" />
     <ProjectReference Include="..\..\PlugIn\Wechaty.PlugIn.Weather\Wechaty.PlugIn.Weather.csproj" />
-    <ProjectReference Include="..\Wechaty.Application.Contracts\Wechaty.Application.Contracts.csproj" />
   </ItemGroup>
 
   <ItemGroup>
