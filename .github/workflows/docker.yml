@@ -26,3 +26,4 @@ jobs:
           dockerfile: ./src/Sample/Wechaty.Getting.Start/Dockerfile 
           repository: wechaty/dotnet-wechaty
           tags: latest
+          tag_with_ref: true
