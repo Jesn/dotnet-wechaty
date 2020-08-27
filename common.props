@@ -7,7 +7,7 @@
     <owners>Darren</owners>
     <description>dotnet wechaty</description>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
-    <PackageiconUrl>http://qn.3658k.com/dotnet-wechaty.png</PackageiconUrl>
+	<PackageiconUrl>https://wechaty.js.org/img/wechaty-icon.svg</PackageiconUrl>
     <PackageProjectUrl>https://github.com/Jesn/dotnet-wechaty</PackageProjectUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
