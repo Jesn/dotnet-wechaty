@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.Application", "src\Wechaty.Application\Wechaty.Application.csproj", "{66DB895B-47E3-4193-8C2F-DC7E631CA9AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.Application", "src\framework\Wechaty.Application\Wechaty.Application.csproj", "{66DB895B-47E3-4193-8C2F-DC7E631CA9AF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.Application.Contracts", "src\Wechaty.Application.Contracts\Wechaty.Application.Contracts.csproj", "{9798A6A9-E1AB-46AB-9393-CFA137A7249E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.Application.Contracts", "src\framework\Wechaty.Application.Contracts\Wechaty.Application.Contracts.csproj", "{9798A6A9-E1AB-46AB-9393-CFA137A7249E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.Puppet.Model", "src\Wechaty.Puppet.Model\Wechaty.Puppet.Model.csproj", "{6BFC6005-815A-46FE-8716-2923B8574D83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.Puppet.Model", "src\framework\Wechaty.Puppet.Model\Wechaty.Puppet.Model.csproj", "{6BFC6005-815A-46FE-8716-2923B8574D83}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.Puppet.Contracts", "src\Wechaty.Puppet.Contracts\Wechaty.Puppet.Contracts.csproj", "{4EBFBEFE-42DE-40C8-BE78-3DB3FAF61F6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.Puppet.Contracts", "src\framework\Wechaty.Puppet.Contracts\Wechaty.Puppet.Contracts.csproj", "{4EBFBEFE-42DE-40C8-BE78-3DB3FAF61F6C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.Puppet.Hostie", "src\Wechaty.Puppet.Hostie\Wechaty.Puppet.Hostie.csproj", "{2C7542F5-7DCD-4E4B-89BC-EE8A3B8E7567}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.Puppet.Hostie", "src\framework\Wechaty.Puppet.Hostie\Wechaty.Puppet.Hostie.csproj", "{2C7542F5-7DCD-4E4B-89BC-EE8A3B8E7567}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.Domain.Shared", "src\Wechaty.Domain.Shared\Wechaty.Domain.Shared.csproj", "{55E22972-F3D2-4169-8B2C-EDFE92029350}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.Domain.Shared", "src\framework\Wechaty.Domain.Shared\Wechaty.Domain.Shared.csproj", "{55E22972-F3D2-4169-8B2C-EDFE92029350}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{4C92599B-836A-4AE6-A1E2-6F49A7FF1158}"
 EndProject
@@ -27,7 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugin", "Plugin", "{299541
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.PlugIn.QRCodeTerminal", "src\PlugIn\Wechaty.PlugIn.QRCodeTerminal\Wechaty.PlugIn.QRCodeTerminal.csproj", "{9DD77F9A-92F5-4658-8151-F4ECBC6DB173}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.Plugin.Base", "src\Wechaty.Plugin.Base\Wechaty.Plugin.Base.csproj", "{5ED8D78B-F205-4579-867F-1C44C39F15B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.Plugin.Base", "src\framework\Wechaty.Plugin.Base\Wechaty.Plugin.Base.csproj", "{5ED8D78B-F205-4579-867F-1C44C39F15B3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.PlugIn.DingDong", "src\PlugIn\Wechaty.PlugIn.DingDong\Wechaty.PlugIn.DingDong.csproj", "{A4C69ABD-4D9F-4952-AD6F-167F23B8667A}"
 EndProject
@@ -36,15 +36,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{8837E9BC-C
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.Puppet.Mock", "src\Wechaty.Puppet.Mock\Wechaty.Puppet.Mock.csproj", "{90B0C722-9FC9-4AAA-80B3-3A4015936D59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.Puppet.Mock", "src\framework\Wechaty.Puppet.Mock\Wechaty.Puppet.Mock.csproj", "{90B0C722-9FC9-4AAA-80B3-3A4015936D59}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.Puppet.Hostie.Tests", "test\Wechaty.Puppet.Hostie.Tests\Wechaty.Puppet.Hostie.Tests.csproj", "{E842ECCD-FE3E-497E-8288-EBBFAB2DE42C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.Application.Tests", "test\Wechaty.Application.Tests\Wechaty.Application.Tests.csproj", "{67747F57-9360-454F-9983-C156F534D759}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.Getting.Start", "src\Wechaty.Getting.Start\Wechaty.Getting.Start.csproj", "{DFA5BF24-244B-46E4-811E-A13A759E1E69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.Getting.Start", "src\framework\Wechaty.Getting.Start\Wechaty.Getting.Start.csproj", "{DFA5BF24-244B-46E4-811E-A13A759E1E69}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{2A9BEC28-497B-4111-B4D4-CD5F99056C85}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wechaty.PlugIn.Weather", "src\PlugIn\Wechaty.PlugIn.Weather\Wechaty.PlugIn.Weather.csproj", "{A903E2AA-D375-4D42-A008-B8130E37D8E4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wechaty.PlugIn.Tests", "test\Wechaty.PlugIn.Tests\Wechaty.PlugIn.Tests.csproj", "{0E761C7B-DBAA-43A4-9FFF-B2765645F305}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wechaty.TestBase", "test\Wechaty.TestBase\Wechaty.TestBase.csproj", "{B1BBC0EA-E6BD-4F6C-BDEC-301E78B1B72C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -104,10 +108,18 @@ Global
 		{DFA5BF24-244B-46E4-811E-A13A759E1E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFA5BF24-244B-46E4-811E-A13A759E1E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFA5BF24-244B-46E4-811E-A13A759E1E69}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2A9BEC28-497B-4111-B4D4-CD5F99056C85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2A9BEC28-497B-4111-B4D4-CD5F99056C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2A9BEC28-497B-4111-B4D4-CD5F99056C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2A9BEC28-497B-4111-B4D4-CD5F99056C85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A903E2AA-D375-4D42-A008-B8130E37D8E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A903E2AA-D375-4D42-A008-B8130E37D8E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A903E2AA-D375-4D42-A008-B8130E37D8E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A903E2AA-D375-4D42-A008-B8130E37D8E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E761C7B-DBAA-43A4-9FFF-B2765645F305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E761C7B-DBAA-43A4-9FFF-B2765645F305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E761C7B-DBAA-43A4-9FFF-B2765645F305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E761C7B-DBAA-43A4-9FFF-B2765645F305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1BBC0EA-E6BD-4F6C-BDEC-301E78B1B72C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1BBC0EA-E6BD-4F6C-BDEC-301E78B1B72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1BBC0EA-E6BD-4F6C-BDEC-301E78B1B72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1BBC0EA-E6BD-4F6C-BDEC-301E78B1B72C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -126,6 +138,9 @@ Global
 		{E842ECCD-FE3E-497E-8288-EBBFAB2DE42C} = {27F4D2CD-28F3-4C9C-B598-4120B734D6F3}
 		{67747F57-9360-454F-9983-C156F534D759} = {27F4D2CD-28F3-4C9C-B598-4120B734D6F3}
 		{DFA5BF24-244B-46E4-811E-A13A759E1E69} = {4C92599B-836A-4AE6-A1E2-6F49A7FF1158}
+		{A903E2AA-D375-4D42-A008-B8130E37D8E4} = {299541B9-D72D-4621-8FD5-374EA851FFEA}
+		{0E761C7B-DBAA-43A4-9FFF-B2765645F305} = {27F4D2CD-28F3-4C9C-B598-4120B734D6F3}
+		{B1BBC0EA-E6BD-4F6C-BDEC-301E78B1B72C} = {27F4D2CD-28F3-4C9C-B598-4120B734D6F3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F7AA7A59-5965-45C2-ADF3-02D4C96D69C7}
