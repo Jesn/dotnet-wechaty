@@ -2,25 +2,25 @@
 
 LABEL maintainer="Darren <jesn2013@hotmail.com>"
 
-
 FROM mcr.microsoft.com/dotnet/core/runtime:3.1-buster-slim AS base
 WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["src/Wechaty.Getting.Start/Wechaty.Getting.Start.csproj", "src/Wechaty.Getting.Start/"]
-COPY ["src/Wechaty.Application.Contracts/Wechaty.Application.Contracts.csproj", "src/Wechaty.Application.Contracts/"]
-COPY ["src/Wechaty.Domain.Shared/Wechaty.Domain.Shared.csproj", "src/Wechaty.Domain.Shared/"]
-COPY ["src/Wechaty.Puppet.Model/Wechaty.Puppet.Model.csproj", "src/Wechaty.Puppet.Model/"]
+COPY ["src/framework/Wechaty.Getting.Start/Wechaty.Getting.Start.csproj", "src/framework/Wechaty.Getting.Start/"]
+COPY ["src/PlugIn/Wechaty.PlugIn.Weather/Wechaty.PlugIn.Weather.csproj", "src/PlugIn/Wechaty.PlugIn.Weather/"]
+COPY ["src/framework/Wechaty.Plugin.Base/Wechaty.Plugin.Base.csproj", "src/framework/Wechaty.Plugin.Base/"]
+COPY ["src/framework/Wechaty.Application/Wechaty.Application.csproj", "src/framework/Wechaty.Application/"]
+COPY ["src/framework/Wechaty.Puppet.Hostie/Wechaty.Puppet.Hostie.csproj", "src/framework/Wechaty.Puppet.Hostie/"]
+COPY ["src/framework/Wechaty.Puppet.Contracts/Wechaty.Puppet.Contracts.csproj", "src/framework/Wechaty.Puppet.Contracts/"]
+COPY ["src/framework/Wechaty.Puppet.Model/Wechaty.Puppet.Model.csproj", "src/framework/Wechaty.Puppet.Model/"]
+COPY ["src/framework/Wechaty.Domain.Shared/Wechaty.Domain.Shared.csproj", "src/framework/Wechaty.Domain.Shared/"]
+COPY ["src/framework/Wechaty.Application.Contracts/Wechaty.Application.Contracts.csproj", "src/framework/Wechaty.Application.Contracts/"]
 COPY ["src/PlugIn/Wechaty.PlugIn.QRCodeTerminal/Wechaty.PlugIn.QRCodeTerminal.csproj", "src/PlugIn/Wechaty.PlugIn.QRCodeTerminal/"]
-COPY ["src/Wechaty.Plugin.Base/Wechaty.Plugin.Base.csproj", "src/Wechaty.Plugin.Base/"]
-COPY ["src/Wechaty.Application/Wechaty.Application.csproj", "src/Wechaty.Application/"]
-COPY ["src/Wechaty.Puppet.Hostie/Wechaty.Puppet.Hostie.csproj", "src/Wechaty.Puppet.Hostie/"]
-COPY ["src/Wechaty.Puppet.Contracts/Wechaty.Puppet.Contracts.csproj", "src/Wechaty.Puppet.Contracts/"]
 COPY ["src/PlugIn/Wechaty.PlugIn.DingDong/Wechaty.PlugIn.DingDong.csproj", "src/PlugIn/Wechaty.PlugIn.DingDong/"]
-RUN dotnet restore "src/Wechaty.Getting.Start/Wechaty.Getting.Start.csproj"
+RUN dotnet restore "src/framework/Wechaty.Getting.Start/Wechaty.Getting.Start.csproj"
 COPY . .
-WORKDIR "/src/src/Wechaty.Getting.Start"
+WORKDIR "/src/src/framework/Wechaty.Getting.Start"
 RUN dotnet build "Wechaty.Getting.Start.csproj" -c Release -o /app/build
 
 FROM build AS publish
